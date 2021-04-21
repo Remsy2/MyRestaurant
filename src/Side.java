@@ -1,83 +1,26 @@
-package takeout.utils;
 
-public class PrintUtils {
+public class Side {
+  private String sideName;
+  private double sidePrice;
 
-  public static void print(String text) {
-    System.out.print(text);
+  Side(String name, double price) {
+    this.sideName = name;
+    this.sidePrice = price;
   }
 
-  public static void println() {
-    System.out.println();
+  public String getSideName() {
+    return sideName;
   }
 
-  public static void printMenuTitle() {
-    println();
-    println();
-    print("________________________ Take Out Menu __________________________");
-    println();
-    println();
+  public double getSidePrice() {
+    return sidePrice;
   }
 
-  public static void printMainDishesTitle() {
-    print("Our Best Main Dishes:");
-    println();
-    println();
+  public void setSideName(String sideName) {
+    this.sideName = sideName;
   }
 
-  public static void printSidesTitle() {
-    print("Our Healthy Sides:");
-    println();
-    println();
-  }
-
-  public static void printDrinksTitle() {
-    print("Drinks:");
-    println();
-    println();
-  }
-
-  public static void printPrice(double price) { //10.00   5.00
-    if(price < 10) {
-      print("$ " + price);
-    } else {
-      print("$" + price);
-    }
-  }
-
-  public static void printLine() {
-    println();
-    print("______________________________________________________________________");
-  }
-
-  static int maxLength = 0;
-
-  private static int maxLengthName(String[] names) {
-    for (int i = 0; i < names.length; i ++) {
-      if (names[i].length() > maxLength) {
-        maxLength = names[i].length();
-      }
-    }
-    return maxLength;
-  }
-
-  public static int spacesAfterName(String[] names, String[] names1, String[] names2, String name) {
-    maxLength = maxLengthName(names);
-    int maxLength1 = maxLengthName(names1);
-    int maxLength2 = maxLengthName(names2);
-
-    if (maxLength < maxLength1) {
-      maxLength = maxLength1;
-    } else if (maxLength < maxLength2) {
-      maxLength = maxLength2;
-    }
-
-    int count = maxLength - name.length();
-    return count;
-  }
-
-  public static void printSpacesAfterName(int spacesCount) {
-    for (int i = 0; i <= spacesCount; i ++) {
-      print(" ");
-    }
+  public void setSidePrice(double sidePrice) {
+    this.sidePrice = sidePrice;
   }
 }

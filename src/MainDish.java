@@ -1,4 +1,3 @@
-package takeout;
 
 public class MainDish {
   private String mainDishName;

@@ -1,4 +1,3 @@
-package takeout;
 
 public class Restaurant {
 

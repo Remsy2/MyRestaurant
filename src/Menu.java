@@ -1,8 +1,4 @@
-package takeout;
-
-import static takeout.utils.PrintUtils.*;
-
-
+import static utils.PrintUtils.*;
 public class Menu {
 
   MainDish beef = new MainDish("Beef Wellington", 13.00);
